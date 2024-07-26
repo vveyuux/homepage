@@ -11,7 +11,7 @@ export default {
                 accent: "#b4948d",
             },
             fontFamily: {
-                sans: ["Open Sans", "sans-serif"],
+                sans: ["Poppins", "sans-serif"],
             },
         },
     },
