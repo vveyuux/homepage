@@ -1,6 +1,6 @@
 import React from "react";
 
-const GithubIcon = () => {
+const GithubIcon: React.FC = () => {
     return (
         <svg
             className="h-6 w-6 fill-current text-primary hover:text-[#010409] transition-colors duration-300 ease-in-out"

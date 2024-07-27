@@ -4,7 +4,7 @@ import Loading from '../components/loading/Loading'
 import { HOMEPAGE_PATH } from '../constants/constants'
 import Homepage from '../pages/Homepage'
 
-const Router = () => {
+const Router: React.FC = () => {
   return (
     <BrowserRouter>
         <Suspense fallback={<Loading />}>
