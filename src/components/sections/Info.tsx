@@ -14,7 +14,7 @@ const Info: React.FC<InfoPropsInterface> = ({ fullname, position, status }) => {
                     src={myPic}
                     alt="me"
                 />
-                <h1 className="sm:order-2 sm:col-span-6 text-5xl font-bold tracking-tight text-text md:text-4xl">
+                <h1 className="sm:order-2 sm:col-span-6 text-4xl font-bold tracking-tight text-text md:text-3xl">
                     {fullname ? fullname : "Full Name Here"}
                 </h1>
             </div>
