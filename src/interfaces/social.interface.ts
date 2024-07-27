@@ -5,5 +5,5 @@ export interface SocialMediaPropsInterface {
 export interface SocialMediaInterface {
     title: string,
     href: string,
-    icon: () => JSX.Element
+    icon: React.FC
 }
