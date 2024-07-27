@@ -10,6 +10,12 @@
     --primary: #99827c;
     --secondary: #c8b7b3;
     --accent: #b4948d;
+    --text-dark: #f3f2f2;
+    --background-dark: #080707;
+    --primary-dark: #836d67;
+    --secondary-dark: #4d3c38;
+    --accent-dark: #72524b;
+
 }
 
 * {
