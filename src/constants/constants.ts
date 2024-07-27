@@ -6,6 +6,9 @@ import { ExperienceInterface } from "../interfaces/experience.interface";
 import LinkedinIcon from "../components/icon/LinkedinIcon";
 import { ProjectInterface } from "../interfaces/project.interface";
 
+import undergraduatePic from "../assets/images/undergraduate-project.png";
+import chatbotPic from "../assets/images/chatbot-emotion.png";
+
 export const HOMEPAGE_PATH = "/homepage";
 
 export const fullname = "Veerayuth Bussararungsee";
@@ -66,7 +69,7 @@ export const projects: ProjectInterface[] = [
         subName: "for Medicine Identification for the Hearing Impaired",
         description: "The user captures an image of a pill, which the system analyzes to identify its type and properties. The resulting interface provides drug information and voice messages for visually impaired users, all developed using MATLAB.",
         href: "",
-        imgPath: "src/assets/images/undergraduate-project.png",
+        imgPath: undergraduatePic,
         imgAlt: "Machine Learning Model for Medicine Identification",
     },
     {
@@ -74,7 +77,7 @@ export const projects: ProjectInterface[] = [
         subName: "Analyzing Emotional Tone in Text",
         description: "In this project, the chatbot receives text input from the user, analyzes the emotional tone using its built-in model, and then responds with sentences that align with the detected emotion. The system aims to understand and mirror the user's emotional state, providing contextually relevant and empathetic responses.",
         href: "https://github.com/vveyuux/Chatbot_AI_Project",
-        imgPath: "src/assets/images/chatbot-emotion.png",
+        imgPath: chatbotPic,
         imgAlt: "Emotion Detection Chatbot",
     },
 ];

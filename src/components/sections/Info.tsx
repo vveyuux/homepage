@@ -2,6 +2,8 @@ import React from "react";
 import { InfoPropsInterface } from "../../interfaces/info.interface";
 import LinkIcon from "../icon/LinkIcon";
 
+import myPic from "../../assets/images/me.jpg"
+
 const Info: React.FC<InfoPropsInterface> = ({ fullname, position, status }) => {
     return (
         <>
@@ -9,7 +11,7 @@ const Info: React.FC<InfoPropsInterface> = ({ fullname, position, status }) => {
                 <img
                     loading="lazy"
                     className="sm:order-1 sm:col-span-2 sm:translate-y-1 info-img hidden lg:block"
-                    src="src/assets/images/me.jpg"
+                    src={myPic}
                     alt="me"
                 />
                 <h1 className="sm:order-2 sm:col-span-6 text-5xl font-bold tracking-tight text-text md:text-4xl">
