@@ -25,7 +25,7 @@ const ImageZoomIn: React.FC<ImagePropInterface> = ({ imagePath, imageAlt }) => {
                 width={"200"}
                 height={"48"}
                 onClick={openModal}
-                className="cursor-pointer z-20 rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 transition-transform duration-300 transform hover:scale-105"
+                className="cursor-pointer z-20 rounded border-2 border-slate-200/10 group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 transition-transform duration-300 transform hover:scale-105"
                 style={{ color: "transparent" }}
                 src={imagePath}
             />
