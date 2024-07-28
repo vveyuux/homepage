@@ -22,7 +22,7 @@ const Info: React.FC<InfoPropsInterface> = ({ fullname, position, status }) => {
             <p className="mt-4 max-w-xs leading-normal text-text dark:text-textDark">
                 {status ? status : "Status Here"}
                 <a
-                    className="ml-2 inline-flex items-baseline font-medium leading-tight text-primary dark:text-primaryDark hover:text-secondary dark:hover:text-textDark dark:focus-visible:text-textDark font-semibold text-primary dark:text-primaryDark group/link text-base transition-all duration-150 ease-in-out"
+                    className="ml-2 inline-flex items-baseline leading-tight text-primary dark:text-primaryDark hover:text-secondary dark:hover:text-textDark dark:focus-visible:text-textDark font-semibold group/link text-base transition-all duration-150 ease-in-out"
                     href="/homepage/resume.pdf"
                     target="_blank"
                 >
