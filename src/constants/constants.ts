@@ -8,6 +8,7 @@ import { ProjectInterface } from "../interfaces/project.interface";
 
 import undergraduatePic from "../assets/images/undergraduate-project.png";
 import chatbotPic from "../assets/images/chatbot-emotion.png";
+import electricBillCalculatorPic from "../assets/images/electric-bill-calculator.png";
 
 export const HOMEPAGE_PATH = "/homepage";
 
@@ -71,6 +72,9 @@ export const projects: ProjectInterface[] = [
         href: "",
         imgPath: undergraduatePic,
         imgAlt: "Machine Learning Model for Medicine Identification",
+        techStacks: [
+            "Matlab", "Machine Learning", "Support Vector Machines", "Logistic Regression"
+        ],
     },
     {
         projectName: "Emotion Detection Chatbot",
@@ -79,5 +83,19 @@ export const projects: ProjectInterface[] = [
         href: "https://github.com/vveyuux/Chatbot_AI_Project",
         imgPath: chatbotPic,
         imgAlt: "Emotion Detection Chatbot",
+        techStacks: [
+            "Python", "TensorFlow", "NLTK", "Numpy", "Tkinter"
+        ],
+    },
+    {
+        projectName: "Electric Bill Calculator",
+        subName: "Splits a single bill between two electric meters",
+        description: "One day, my girlfriend and I got tired of calculating her mother's electric bill, which she shares with her husband's family. We decided to develop a web app to separate the electric bill into two parts. In this app, users can input details like the energy fee, main house kWh unit, sub house kWh unit, service fee, FT fee, and VAT. The system then calculates and provides two separate electric bills for the main house and sub house.",
+        href: "https://github.com/rynlapat/electric-bill-calculator",
+        imgPath: electricBillCalculatorPic,
+        imgAlt: "Electric Bill Calculator Web Page",
+        techStacks: [
+            "TypeScript", "React.js", "Next.js"
+        ],
     },
 ];

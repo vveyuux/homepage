@@ -8,5 +8,6 @@ export interface ProjectInterface {
     description: string,
     href: string,
     imgPath: string,
-    imgAlt: string
+    imgAlt: string,
+    techStacks?: string[]
 }
