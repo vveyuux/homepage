@@ -15,7 +15,7 @@ const ThemeToggleButton: React.FC = () => {
     }
     return (
         <button
-            className="fixed z-30 bottom-4 right-4 p-3 bg-primary rounded-md shadow-lg hover:bg-primary/75 active:bg-textDark transition-all duration-150 ease-in-out"
+            className="fixed bottom-4 right-4 p-3 bg-primary rounded-md shadow-lg hover:bg-[#b09e9a] active:bg-textDark z-50 transition-all duration-150 ease-in-out"
             type="button"
             onClick={() => darkModeHandler()}
         >
