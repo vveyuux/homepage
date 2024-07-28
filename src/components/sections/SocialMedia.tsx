@@ -8,7 +8,7 @@ const SocialMedia: React.FC<SocialMediaPropsInterface> = ({ menu }) => {
                 const Icon = m.icon;
                 return (
                     <li key={index} className="mr-5 text-xs shrink-0">
-                        <a className="block hover:text-secondary" title={m.title} href={m.href} target="_blank">
+                        <a className="block" title={m.title} href={m.href} target="_blank">
                             <span className="sr-only">{m.title}</span>
                             <Icon />
                         </a>

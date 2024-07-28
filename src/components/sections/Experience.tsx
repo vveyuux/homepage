@@ -13,16 +13,16 @@ const Experience: React.FC<ExperiencePropsInterface> = ({ experiences }) => {
                     {experiences.map((experience, index) => (
                         <li key={index} className="mb-12">
                             <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
-                                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-secondary/25 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                                <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-primary sm:col-span-2">
+                                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-secondary/25 dark:lg:group-hover:bg-secondary/15 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+                                <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-primary dark:text-textDark sm:col-span-2">
                                     {`${experience.startDate} - ${experience.endDate}`}
                                 </header>
                                 <div className="z-10 sm:col-span-6">
-                                    <h3 className="font-medium leading-snug text-primary">
+                                    <h3 className="font-medium leading-snug text-primary dark:text-textDark">
                                         <div>
                                             {experience.href ? (
                                                 <a
-                                                    className="inline-flex items-baseline font-medium leading-tight text-primary hover:text-primary focus-visible:text-accent  group/link text-base"
+                                                    className="inline-flex items-baseline font-medium leading-tight text-primary dark:text-textDark hover:text-primary dark:hover:text-textDark focus-visible:text-accent  group/link text-base"
                                                     href={experience.href}
                                                     target="_blank"
                                                 >
@@ -36,7 +36,7 @@ const Experience: React.FC<ExperiencePropsInterface> = ({ experiences }) => {
                                                     </span>
                                                 </a>
                                             ) : (
-                                                <div className="inline-flex items-baseline font-medium leading-tight text-primary hover:text-primary focus-visible:text-accent  group/link text-base">
+                                                <div className="inline-flex items-baseline font-medium leading-tight text-primary dark:text-textDark hover:text-primary dark:hover:text-textDark focus-visible:text-accent  group/link text-base">
                                                     <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                     <span>
                                                         {experience.title} ·{" "}
@@ -48,11 +48,11 @@ const Experience: React.FC<ExperiencePropsInterface> = ({ experiences }) => {
                                             )}
                                         </div>
                                     </h3>
-                                    <p className="mt-2 text-sm leading-normal">{experience.description}</p>
+                                    <p className="mt-2 text-sm leading-normal text-text dark:text-slate-300">{experience.description}</p>
                                     <ul className="mt-2 flex flex-wrap">
                                         {experience.techStacks.map((tech, index) => (
                                             <li key={index} className="mr-1.5 mt-2">
-                                                <div className="flex items-center rounded-full bg-accent/25 px-3 py-1 text-xs font-medium leading-5 text-primary ">
+                                                <div className="flex items-center rounded-full bg-accent/50 dark:bg-accentDark/50 px-3 py-1 text-xs font-medium leading-5 text-primary dark:text-textDark ">
                                                     {tech}
                                                 </div>
                                             </li>
@@ -65,7 +65,7 @@ const Experience: React.FC<ExperiencePropsInterface> = ({ experiences }) => {
                 </ol>
                 {/* <div className="mt-12">
                     <a
-                        className="inline-flex items-baseline font-medium leading-tight text-primary hover:text-secondary focus-visible:text-secondary font-semibold text-primary group/link text-base"
+                        className="inline-flex items-baseline font-medium leading-tight text-primary dark:text-primaryDark hover:text-secondary focus-visible:text-secondary font-semibold text-primary dark:text-primaryDark group/link text-base"
                         href="/homepage/resume.pdf"
                         target="_blank"
                     >

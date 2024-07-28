@@ -14,15 +14,15 @@ const Info: React.FC<InfoPropsInterface> = ({ fullname, position, status }) => {
                     src={myPic}
                     alt="me"
                 />
-                <h1 className="sm:order-2 sm:col-span-6 text-4xl font-bold tracking-tight text-text md:text-3xl">
+                <h1 className="sm:order-2 sm:col-span-6 text-4xl font-bold tracking-tight text-text dark:text-textDark md:text-3xl">
                     {fullname ? fullname : "Full Name Here"}
                 </h1>
             </div>
-            <h2 className="mt-3 text-lg font-medium tracking-tight text-text sm:text-xl">{position ? position : "Position Here"}</h2>
-            <p className="mt-4 max-w-xs leading-normal">
+            <h2 className="mt-3 text-lg font-medium tracking-tight text-text dark:text-textDark sm:text-xl">{position ? position : "Position Here"}</h2>
+            <p className="mt-4 max-w-xs leading-normal text-text dark:text-textDark">
                 {status ? status : "Status Here"}
                 <a
-                    className="ml-2 inline-flex items-baseline font-medium leading-tight text-primary hover:text-secondary focus-visible:text-secondary font-semibold text-primary group/link text-base"
+                    className="ml-2 inline-flex items-baseline font-medium leading-tight text-primary dark:text-primaryDark hover:text-secondary dark:hover:text-textDark dark:focus-visible:text-textDark font-semibold text-primary dark:text-primaryDark group/link text-base transition-all duration-150 ease-in-out"
                     href="/homepage/resume.pdf"
                     target="_blank"
                 >

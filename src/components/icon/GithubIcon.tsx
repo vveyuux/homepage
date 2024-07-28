@@ -3,7 +3,7 @@ import React from "react";
 const GithubIcon: React.FC = () => {
     return (
         <svg
-            className="h-6 w-6 fill-current text-primary hover:text-[#010409] transition-colors duration-300 ease-in-out"
+            className="h-6 w-6 fill-current text-primary dark:text-textDark/75 hover:text-[#010409] dark:hover:fill-white transition-colors duration-300 ease-in-out"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
             fill="none"
