@@ -1,11 +1,12 @@
 import React from "react";
 import { ProjectPropsInterface } from "../../interfaces/project.interface";
 import LinkIcon from "../icon/LinkIcon";
+import ImageZoomIn from "../image/ImageZoomIn";
 
 const Projects: React.FC<ProjectPropsInterface> = ({ projects }) => {
     return (
         <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-            <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-primary/75 backdrop:blur-md px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+            <div className="sticky top-0 z-30 -mx-6 mb-4 w-screen bg-primary/75 backdrop:blur-md px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                 <h2 className="text-sm font-bold uppercase tracking-widest text-white lg:sr-only">Projects</h2>
             </div>
             <div>
@@ -34,34 +35,25 @@ const Projects: React.FC<ProjectPropsInterface> = ({ projects }) => {
                                             <div className="inline-flex items-baseline font-medium leading-tight text-primary dark:text-textDark hover:text-primary dark:hover:text-textDark focus-visible:text-accent  group/link text-base">
                                                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                                                 <span>
-                                                    {proj.projectName}{" "}
-                                                    <span className="inline-block">
-                                                        {proj.subName}
-                                                    </span>
+                                                    {proj.projectName} <span className="inline-block">{proj.subName}</span>
                                                 </span>
                                             </div>
                                         )}
                                     </h3>
                                     <p className="mt-2 text-sm leading-normal text-text dark:text-slate-300">{proj.description}</p>
-                                    {proj.techStacks && <ul className="mt-2 flex flex-wrap">
-                                         {proj.techStacks.map((tech, index) => (
-                                            <li key={index} className="mr-1.5 mt-2">
-                                                <div className="flex items-center rounded-full bg-accent/50 dark:bg-accentDark/50 px-3 py-1 text-xs font-medium leading-5 text-primary dark:text-textDark ">
-                                                    {tech}
-                                                </div>
-                                            </li>
-                                        ))}
-                                    </ul>}
+                                    {proj.techStacks && (
+                                        <ul className="mt-2 flex flex-wrap">
+                                            {proj.techStacks.map((tech, index) => (
+                                                <li key={index} className="mr-1.5 mt-2">
+                                                    <div className="flex items-center rounded-full bg-accent/50 dark:bg-accentDark/50 px-3 py-1 text-xs font-medium leading-5 text-primary dark:text-textDark ">
+                                                        {tech}
+                                                    </div>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
                                 </div>
-                                <img
-                                    alt={proj.imgAlt}
-                                    loading={"lazy"}
-                                    width={"200"}
-                                    height={"48"}
-                                    className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
-                                    style={{ color: "transparent" }}
-                                    src={proj.imgPath}
-                                />
+                                <ImageZoomIn imagePath={proj.imgPath} imageAlt={proj.imgAlt} />
                             </div>
                         </li>
                     ))}
