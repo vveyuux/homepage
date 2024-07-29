@@ -9,6 +9,7 @@ import { ProjectInterface } from "../interfaces/project.interface";
 import undergraduatePic from "../assets/images/undergraduate-project.png";
 import chatbotPic from "../assets/images/chatbot-emotion.png";
 import electricBillCalculatorPic from "../assets/images/electric-bill-calculator.png";
+import todolistPic from "../assets/images/todo-list.png";
 
 export const HOMEPAGE_PATH = "/homepage";
 
@@ -96,6 +97,17 @@ export const projects: ProjectInterface[] = [
         imgAlt: "Electric Bill Calculator Web Page",
         techStacks: [
             "TypeScript", "React.js", "Next.js"
+        ],
+    },
+    {
+        projectName: "Todo List Web App",
+        subName: "A simple to-do list web app",
+        description: "users can create their lists with tags like Today, Home, and Work. You can add, edit, mark as complete, and delete tasks. All data is stored in MongoDB. The app is built with HTML, CSS, and JavaScript.",
+        href: "https://github.com/vveyuux/todo-list-web-app",
+        imgPath: todolistPic,
+        imgAlt: "Todo List Web App",
+        techStacks: [
+            "HTML", "CSS", "JavaScript", "MongoDB"
         ],
     },
 ];
