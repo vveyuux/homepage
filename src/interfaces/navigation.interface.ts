@@ -3,6 +3,7 @@ export interface NavigationPropsInterface {
 }
 
 export interface NavigationInterface {
+    id: string,
     title: string,
     href: string,
 }

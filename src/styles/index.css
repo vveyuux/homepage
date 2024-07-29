@@ -51,6 +51,26 @@ body {
     animation: profile_animate 8s ease-in-out infinite 1s;
 }
 
+/* Active state styles */
+.nav .active .nav-indicator {
+    width: 4rem; /* Change to match hover/focus state */
+    background-color: var(--secondary); /* Change to desired color */
+}
+
+.nav .active .nav-text {
+    color: var(--secondary); /* Change to desired color */
+}
+
+/* Dark mode styles */
+
+.dark .nav .active .nav-indicator {
+    background-color: var(--text-dark); /* Dark mode secondary color */
+}
+
+.dark .nav .active .nav-text {
+    color: var(--text-dark); /* Dark mode text color */
+}
+
 @keyframes profile_animate {
     0% {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;

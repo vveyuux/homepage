@@ -23,9 +23,9 @@ export const infoData: InfoPropsInterface = {
 };
 
 export const navMenu: NavigationInterface[] = [
-    { title: "About", href: "#about" },
-    { title: "Experience", href: "#experience" },
-    { title: "Projects", href: "#projects" },
+    { id: "about", title: "About", href: "#about" },
+    { id: "experience", title: "Experience", href: "#experience" },
+    { id: "projects", title: "Projects", href: "#projects" },
 ];
 
 export const socialMediaLinks: SocialMediaInterface[] = [
