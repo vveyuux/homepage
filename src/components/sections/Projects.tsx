@@ -49,7 +49,7 @@ const Projects: React.FC<ProjectPropsInterface> = ({ projects }) => {
                                         <ul className="mt-2 flex flex-wrap">
                                             {proj.techStacks.map((tech, index) => (
                                                 <li key={index} className="mr-1.5 mt-2">
-                                                    <div className="flex items-center rounded-full bg-accent/50 dark:bg-accentDark/50 px-3 py-1 text-xs font-medium leading-5 text-primary dark:text-textDark ">
+                                                    <div className="flex items-center rounded-full bg-accent/50 dark:bg-accentDark/50 px-3 py-1 text-xs font-medium leading-5 text-accentDark dark:text-textDark ">
                                                         {tech}
                                                     </div>
                                                 </li>

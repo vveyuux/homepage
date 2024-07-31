@@ -36,7 +36,7 @@ const ProjectTableBodyRow: React.FC<RowProps<ProjectTableBodyRowPropInterface>> 
             <td className="hidden py-4 pr-4 align-top lg:table-cell">
                 <ul className="flex -translate-y-1.5 flex-wrap">
                     {rowData.builtWith.map((tech, index) => <li key={index} className="my-1 mr-1.5">
-                        <div className="flex items-center rounded-full bg-accent/50 dark:bg-accentDark/50 px-3 py-1 text-xs font-medium leading-5 text-primary dark:text-textDark ">
+                        <div className="flex items-center rounded-full bg-accent/50 dark:bg-accentDark/50 px-3 py-1 text-xs font-medium leading-5 text-accentDark dark:text-textDark ">
                             {tech}
                         </div>
                     </li>) }
