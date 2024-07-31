@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ImagePropInterface } from "../../interfaces/image.interface";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const ImageZoomIn: React.FC<ImagePropInterface> = ({ imagePath, imageAlt }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const ImageZoomIn: React.FC<ImagePropInterface> = ({ imagePath, imageAlt }) => {
     }, [isOpen]);
 
     return (
-        <>  
+        <>
             <img
                 alt={imageAlt}
                 loading={"lazy"}
@@ -29,30 +29,28 @@ const ImageZoomIn: React.FC<ImagePropInterface> = ({ imagePath, imageAlt }) => {
                 style={{ color: "transparent" }}
                 src={imagePath}
             />
-            <AnimatePresence>
-                {isOpen && (
+            {isOpen && (
+                <motion.div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    onClick={closeModal}
+                >
                     <motion.div
-                        className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={closeModal}
+                        className={"relative grid place-items-center"}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        exit={{ scale: 0 }}
+                        transition={{ duration: 0.3 }}
                     >
-                        <motion.div
-                            className={"relative grid place-items-center"}
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            exit={{ scale: 0 }}
-                            transition={{ duration: 0.3 }}
-                        >
-                            <img src={imagePath} alt={imageAlt} className="w-8/12 rounded-lg max-w-full max-h-screen" />
-                            <button className="mt-5 text-white text-md w-full" onClick={closeModal}>
-                                Click anywhere to exit
-                            </button>
-                        </motion.div>
+                        <img src={imagePath} alt={imageAlt} className="w-8/12 rounded-lg max-w-full max-h-screen" />
+                        <button className="mt-5 text-white text-md w-full" onClick={closeModal}>
+                            Click anywhere to exit
+                        </button>
                     </motion.div>
-                )}
-            </AnimatePresence>
+                </motion.div>
+            )}
         </>
     );
 };
