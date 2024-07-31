@@ -4,7 +4,7 @@ import LinkIcon from "../icon/LinkIcon";
 
 const ProjectTableBodyRow: React.FC<RowProps<ProjectTableBodyRowPropInterface>> = ({ rowData }) => {
     return (
-        <tr className="border-b border-primary dark:border-primaryDark last:border-none">
+        <tr className="border-b border-primary/25 dark:border-primaryDark/25 last:border-none">
             <td className="py-4 pr-4 align-top text-sm text-text dark:text-slate-300">
                 <div className="translate-y-px">{rowData.year}</div>
             </td>

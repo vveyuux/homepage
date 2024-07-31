@@ -22,10 +22,10 @@ const ImageZoomIn: React.FC<ImagePropInterface> = ({ imagePath, imageAlt }) => {
             <img
                 alt={imageAlt}
                 loading={"lazy"}
-                width={"200"}
+                width={"100"}
                 height={"48"}
                 onClick={openModal}
-                className="cursor-pointer z-20 rounded border-2 border-slate-200/10 group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 transition-transform duration-300 transform hover:scale-105"
+                className="cursor-pointer z-20 rounded border-2 border-primary/20 group-hover:border-secondary/50 sm:order-1 sm:col-span-2 sm:translate-y-1 transition-transform duration-300 transform hover:scale-105"
                 style={{ color: "transparent" }}
                 src={imagePath}
             />
@@ -45,7 +45,7 @@ const ImageZoomIn: React.FC<ImagePropInterface> = ({ imagePath, imageAlt }) => {
                             exit={{ scale: 0 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <img src={imagePath} alt={imageAlt} className="w-10/12 rounded-lg max-w-full max-h-screen" />
+                            <img src={imagePath} alt={imageAlt} className="w-8/12 rounded-lg max-w-full max-h-screen" />
                             <button className="mt-5 text-white text-md w-full" onClick={closeModal}>
                                 Click anywhere to exit
                             </button>

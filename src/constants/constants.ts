@@ -85,7 +85,7 @@ export const projects: ProjectInterface[] = [
         subName: "Analyzing Emotional Tone in Text",
         description:
             "In this project, the chatbot receives text input from the user, analyzes the emotional tone using its built-in model, and then responds with sentences that align with the detected emotion. The system aims to understand and mirror the user's emotional state, providing contextually relevant and empathetic responses.",
-        href: "https://github.com/vveyuux/Chatbot_AI_Project",
+        href: "https://github.com/vveyuux/chatbot-ai-project",
         imgPath: chatbotPic,
         imgAlt: "Emotion Detection Chatbot",
         techStacks: ["Python", "TensorFlow", "NLTK", "Numpy", "Tkinter"],
@@ -130,12 +130,12 @@ export const projectTableHeads: HeadRowInterface[] = [
         title: "Project",
     },
     {
-        title: "Built With",
+        title: "Tech Stacks",
         hidden: true,
         lg: true,
     },
     {
-        title: "Link",
+        title: "Repository",
         hidden: true,
         sm: true,
     },
@@ -143,11 +143,43 @@ export const projectTableHeads: HeadRowInterface[] = [
 
 export const allProjectData: ProjectTableBodyRowPropInterface[] = [
     {
+        year: "2024",
+        projectName: "Electric Bill ",
+        projectSubName: "Calculator",
+        builtWith: ["TypeScript", "React.js", "Next.js"],
+        titleLink: "electric-bill-calculator",
+        href: "https://github.com/rynlapat/electric-bill-calculator",
+    },
+    {
+        year: "2023",
+        projectName: "Todo List ",
+        projectSubName: "Web App",
+        builtWith: ["HTML", "CSS", "JavaScript", "MongoDB"],
+        titleLink: "todo-list-web-app",
+        href: "https://github.com/vveyuux/todo-list-web-app",
+    },
+    {
+        year: "2023",
+        projectName: "Simon Game ",
+        projectSubName: "Web App",
+        builtWith: ["HTML", "CSS", "JavaScript"],
+        titleLink: "simon-game",
+        href: "https://github.com/vveyuux/simon-game",
+    },
+    {
+        year: "2023",
+        projectName: "Dice Game ",
+        projectSubName: "Web App",
+        builtWith: ["HTML", "CSS", "JavaScript"],
+        titleLink: "dice-game",
+        href: "https://github.com/vveyuux/dice-game",
+    },
+    {
         year: "2022",
         projectName: "Emotion Detection ",
         projectSubName: "Chatbot",
         builtWith: ["Python", "TensorFlow", "NLTK", "Numpy", "Tkinter"],
-        titleLink: "Chatbot AI Project Repo",
-        href: "https://github.com/vveyuux/Chatbot_AI_Project",
+        titleLink: "chatbot-ai-project",
+        href: "https://github.com/vveyuux/chatbot-ai-project",
     },
 ];
