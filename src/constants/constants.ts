@@ -9,8 +9,6 @@ import { ProjectInterface } from "../interfaces/project.interface";
 import undergraduatePic from "../assets/images/undergraduate-project.png";
 import chatbotPic from "../assets/images/chatbot-emotion.png";
 import electricBillCalculatorPic from "../assets/images/electric-bill-calculator.png";
-import todolistPic from "../assets/images/todo-list.png";
-import simonGamePic from "../assets/images/simon-game.png";
 import { HeadRowInterface, ProjectTableBodyRowPropInterface } from "../interfaces/table.interface";
 
 export const HOMEPAGE_PATH = `/homepage`;
@@ -72,7 +70,7 @@ export const experiences: ExperienceInterface[] = [
 export const projects: ProjectInterface[] = [
     {
         projectName: "A Machine Learning and Image Processing Model",
-        subName: "for Medicine Identification for the Hearing Impaired",
+        subName: "for Medicine Identification for the Hearing Impaired (Undergraduate Project)",
         description:
             "The user captures an image of a pill, which the system analyzes to identify its type and properties. The resulting interface provides drug information and voice messages for visually impaired users, all developed using MATLAB.",
         href: "",
@@ -99,26 +97,6 @@ export const projects: ProjectInterface[] = [
         imgPath: electricBillCalculatorPic,
         imgAlt: "Electric Bill Calculator Web Page",
         techStacks: ["TypeScript", "React.js", "Next.js"],
-    },
-    {
-        projectName: "Todo List Web App",
-        subName: "A simple to-do list web app",
-        description:
-            "users can create their lists with tags like Today, Home, and Work. You can add, edit, mark as complete, and delete tasks. All data is stored in MongoDB.",
-        href: "https://github.com/vveyuux/todo-list-web-app",
-        imgPath: todolistPic,
-        imgAlt: "Todo List Web App",
-        techStacks: ["HTML", "CSS", "JavaScript", "MongoDB"],
-    },
-    {
-        projectName: "Simon Game Web App",
-        subName: "A simple Simon Game web app",
-        description:
-            "I developed a simple Simon Game web app. It's a memory game where players replicate sequences of colors and sounds using four colored buttons. The game starts with one color and sound, adding another each round, and the challenge is to follow the growing sequence correctly. The game ends if the player makes a mistake.",
-        href: "https://github.com/vveyuux/simon-game",
-        imgPath: simonGamePic,
-        imgAlt: "Simon Game Web App",
-        techStacks: ["HTML", "CSS", "JavaScript"],
     },
 ];
 
