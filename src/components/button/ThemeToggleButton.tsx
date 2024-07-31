@@ -2,12 +2,12 @@ import React from "react";
 import SunIcon from "../icon/SunIcon";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme } from "../redux/slices/themeSlice";
-import { RootState } from "../redux/store";
+import { AppDispatch, RootState } from "../redux/store";
 import MonnIcon from "../icon/MonnIcon";
 
 const ThemeToggleButton: React.FC = () => {
     const toggle = useSelector((state: RootState) => state.theme.toggle);
-    const dispatch = useDispatch();
+    const dispatch: AppDispatch = useDispatch();
 
     const darkModeHandler = () => {
         dispatch(toggleTheme())
