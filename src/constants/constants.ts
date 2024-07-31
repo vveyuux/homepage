@@ -11,8 +11,11 @@ import chatbotPic from "../assets/images/chatbot-emotion.png";
 import electricBillCalculatorPic from "../assets/images/electric-bill-calculator.png";
 import todolistPic from "../assets/images/todo-list.png";
 import simonGamePic from "../assets/images/simon-game.png";
+import { HeadRowInterface, ProjectTableBodyRowPropInterface } from "../interfaces/table.interface";
 
-export const HOMEPAGE_PATH = "/homepage";
+export const HOMEPAGE_PATH = `/homepage`;
+export const PROJECTPAGE_PATH = `${HOMEPAGE_PATH}/project/`;
+export const RESUME_PATH = `${HOMEPAGE_PATH}/resume.pdf`;
 
 export const fullname = "Veerayuth Bussararungsee";
 export const position = "A Recent Software Engineering Graduate";
@@ -70,56 +73,81 @@ export const projects: ProjectInterface[] = [
     {
         projectName: "A Machine Learning and Image Processing Model",
         subName: "for Medicine Identification for the Hearing Impaired",
-        description: "The user captures an image of a pill, which the system analyzes to identify its type and properties. The resulting interface provides drug information and voice messages for visually impaired users, all developed using MATLAB.",
+        description:
+            "The user captures an image of a pill, which the system analyzes to identify its type and properties. The resulting interface provides drug information and voice messages for visually impaired users, all developed using MATLAB.",
         href: "",
         imgPath: undergraduatePic,
         imgAlt: "Machine Learning Model for Medicine Identification",
-        techStacks: [
-            "Matlab", "Machine Learning", "Support Vector Machines", "Logistic Regression"
-        ],
+        techStacks: ["Matlab", "Machine Learning", "Support Vector Machines", "Logistic Regression"],
     },
     {
         projectName: "Emotion Detection Chatbot",
         subName: "Analyzing Emotional Tone in Text",
-        description: "In this project, the chatbot receives text input from the user, analyzes the emotional tone using its built-in model, and then responds with sentences that align with the detected emotion. The system aims to understand and mirror the user's emotional state, providing contextually relevant and empathetic responses.",
+        description:
+            "In this project, the chatbot receives text input from the user, analyzes the emotional tone using its built-in model, and then responds with sentences that align with the detected emotion. The system aims to understand and mirror the user's emotional state, providing contextually relevant and empathetic responses.",
         href: "https://github.com/vveyuux/Chatbot_AI_Project",
         imgPath: chatbotPic,
         imgAlt: "Emotion Detection Chatbot",
-        techStacks: [
-            "Python", "TensorFlow", "NLTK", "Numpy", "Tkinter"
-        ],
+        techStacks: ["Python", "TensorFlow", "NLTK", "Numpy", "Tkinter"],
     },
     {
         projectName: "Electric Bill Calculator",
         subName: "Splits a single bill between two electric meters",
-        description: "One day, my girlfriend and I got tired of calculating her mother's electric bill, which she shares with her husband's family. We decided to develop a web app to separate the electric bill into two parts. In this app, users can input details like the energy fee, main house kWh unit, sub house kWh unit, service fee, FT fee, and VAT. The system then calculates and provides two separate electric bills for the main house and sub house.",
+        description:
+            "One day, my girlfriend and I got tired of calculating her mother's electric bill, which she shares with her husband's family. We decided to develop a web app to separate the electric bill into two parts. In this app, users can input details like the energy fee, main house kWh unit, sub house kWh unit, service fee, FT fee, and VAT. The system then calculates and provides two separate electric bills for the main house and sub house.",
         href: "https://github.com/rynlapat/electric-bill-calculator",
         imgPath: electricBillCalculatorPic,
         imgAlt: "Electric Bill Calculator Web Page",
-        techStacks: [
-            "TypeScript", "React.js", "Next.js"
-        ],
+        techStacks: ["TypeScript", "React.js", "Next.js"],
     },
     {
         projectName: "Todo List Web App",
         subName: "A simple to-do list web app",
-        description: "users can create their lists with tags like Today, Home, and Work. You can add, edit, mark as complete, and delete tasks. All data is stored in MongoDB.",
+        description:
+            "users can create their lists with tags like Today, Home, and Work. You can add, edit, mark as complete, and delete tasks. All data is stored in MongoDB.",
         href: "https://github.com/vveyuux/todo-list-web-app",
         imgPath: todolistPic,
         imgAlt: "Todo List Web App",
-        techStacks: [
-            "HTML", "CSS", "JavaScript", "MongoDB"
-        ],
+        techStacks: ["HTML", "CSS", "JavaScript", "MongoDB"],
     },
     {
         projectName: "Simon Game Web App",
         subName: "A simple Simon Game web app",
-        description: "I developed a simple Simon Game web app. It's a memory game where players replicate sequences of colors and sounds using four colored buttons. The game starts with one color and sound, adding another each round, and the challenge is to follow the growing sequence correctly. The game ends if the player makes a mistake.",
+        description:
+            "I developed a simple Simon Game web app. It's a memory game where players replicate sequences of colors and sounds using four colored buttons. The game starts with one color and sound, adding another each round, and the challenge is to follow the growing sequence correctly. The game ends if the player makes a mistake.",
         href: "https://github.com/vveyuux/simon-game",
         imgPath: simonGamePic,
         imgAlt: "Simon Game Web App",
-        techStacks: [
-            "HTML", "CSS", "JavaScript"
-        ],
+        techStacks: ["HTML", "CSS", "JavaScript"],
+    },
+];
+
+export const projectTableHeads: HeadRowInterface[] = [
+    {
+        title: "Year",
+    },
+    {
+        title: "Project",
+    },
+    {
+        title: "Built With",
+        hidden: true,
+        lg: true,
+    },
+    {
+        title: "Link",
+        hidden: true,
+        sm: true,
+    },
+];
+
+export const allProjectData: ProjectTableBodyRowPropInterface[] = [
+    {
+        year: "2022",
+        projectName: "Emotion Detection ",
+        projectSubName: "Chatbot",
+        builtWith: ["Python", "TensorFlow", "NLTK", "Numpy", "Tkinter"],
+        titleLink: "Chatbot AI Project Repo",
+        href: "https://github.com/vveyuux/Chatbot_AI_Project",
     },
 ];

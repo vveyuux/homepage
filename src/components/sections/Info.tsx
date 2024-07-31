@@ -3,13 +3,13 @@ import { InfoPropsInterface } from "../../interfaces/info.interface";
 import LinkIcon from "../icon/LinkIcon";
 
 import myPic from "../../assets/images/me.jpg"
+import { RESUME_PATH } from "../../constants/constants";
 
 const Info: React.FC<InfoPropsInterface> = ({ fullname, position, status }) => {
     return (
         <>
             <div className="lg:mb-6 group relative grid lg:place-items-center gap-4 sm:grid-cols-8 sm:gap-8 md:gap-4">
                 <img
-                    loading="lazy"
                     className="sm:order-1 sm:col-span-2 sm:translate-y-1 info-img hidden lg:block"
                     src={myPic}
                     alt="me"
@@ -22,8 +22,8 @@ const Info: React.FC<InfoPropsInterface> = ({ fullname, position, status }) => {
             <p className="mt-4 max-w-xs leading-normal text-text dark:text-textDark">
                 {status ? status : "Status Here"}
                 <a
-                    className="ml-2 inline-flex items-baseline leading-tight text-primary dark:text-primaryDark hover:text-secondary dark:hover:text-textDark dark:focus-visible:text-textDark font-semibold group/link text-base transition-all duration-150 ease-in-out"
-                    href="/homepage/resume.pdf"
+                    className="ml-2 inline-flex items-baseline leading-tight text-primary dark:text-primaryDark hover:text-secondary dark:hover:text-textDark focus-visible:text-text dark:focus-visible:text-textDark font-semibold group/link text-base transition-all duration-150 ease-in-out"
+                    href={RESUME_PATH}
                     target="_blank"
                 >
                     <span>

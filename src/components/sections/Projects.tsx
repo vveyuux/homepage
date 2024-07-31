@@ -2,8 +2,12 @@ import React from "react";
 import { ProjectPropsInterface } from "../../interfaces/project.interface";
 import LinkIcon from "../icon/LinkIcon";
 import ImageZoomIn from "../image/ImageZoomIn";
+import { PROJECTPAGE_PATH } from "../../constants/constants";
+import { useNavigate } from "react-router-dom";
+import RightArrow from "../icon/RightArrow";
 
 const Projects: React.FC<ProjectPropsInterface> = ({ projects }) => {
+    const navigate = useNavigate();
     return (
         <section id="projects" className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
             <div className="sticky top-0 z-30 -mx-6 mb-4 w-screen bg-primary/75 backdrop:blur-md px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
@@ -58,7 +62,25 @@ const Projects: React.FC<ProjectPropsInterface> = ({ projects }) => {
                         </li>
                     ))}
                 </ul>
-                <div className="mt-12"></div>
+                <div className="mt-12">
+                    <a
+                        className="inline-flex items-center font-medium leading-tight text-primary dark:text-primaryDark group"
+                        aria-label="View Full Project Archive"
+                        onClick={() => navigate(PROJECTPAGE_PATH)}
+                    >
+                        <span>
+                            <span className="border-b border-transparent pb-px transition group-hover:border-primary dark:group-hover:border-primaryDark motion-reduce:transition-none">
+                                View My All{" "}
+                            </span>
+                            <span className="whitespace-nowrap">
+                                <span className="border-b border-transparent pb-px transition group-hover:border-primary dark:group-hover:border-primaryDark motion-reduce:transition-none">
+                                    Project
+                                </span>
+                                <RightArrow />
+                            </span>
+                        </span>
+                    </a>
+                </div>
             </div>
         </section>
     );

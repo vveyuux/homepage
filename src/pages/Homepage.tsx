@@ -8,7 +8,7 @@ import Projects from "../components/sections/Projects";
 import { experiences, infoData, navMenu, projects, socialMediaLinks } from "../constants/constants";
 import ThemeToggleButton from "../components/button/ThemeToggleButton";
 
-const Homepage: React.FC = () => {
+const HomePage: React.FC = () => {
     return (
         <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0 bg-background dark:bg-backgroundDark transition-all duration-150 ease-in-out">
             <ThemeToggleButton />
@@ -30,4 +30,4 @@ const Homepage: React.FC = () => {
     );
 };
 
-export default Homepage;
+export default HomePage;
