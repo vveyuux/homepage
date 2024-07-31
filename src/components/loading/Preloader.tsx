@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import coffeeGif from "../../assets/images/coffee-loading.gif";
+import { useDispatch, useSelector } from "react-redux";
+import { changeLoadedStatus } from "../redux/slices/preLoaderSlice";
+import { AppDispatch, RootState } from "../redux/store";
 
 const Preloader: React.FC<{children: React.ReactNode}> = ({children}) => {
     const [progress, setProgress] = useState(0);
-    const [loadingComplete, setLoadingComplete] = useState(false);
     const [fadeInContent, setFadeInContent] = useState(false);
+
+    const loaded = useSelector((state: RootState) => state.preLoader.loaded)
+
+    const dispatch: AppDispatch = useDispatch()
 
     useEffect(() => {
         const interval = setInterval(() => {
             setProgress((prev) => {
                 if (prev >= 100) {
                     clearInterval(interval);
-                    setLoadingComplete(true);
+                    dispatch(changeLoadedStatus(true))
                     setTimeout(() => setFadeInContent(true), 500); // Delay before showing content
                     return 100;
                 }
@@ -26,7 +32,7 @@ const Preloader: React.FC<{children: React.ReactNode}> = ({children}) => {
     return (
         <div className="flex items-center justify-center min-h-screen">
             <AnimatePresence>
-                {!loadingComplete && (
+                {!loaded && (
                     <motion.div
                         className="flex items-center justify-center flex-col"
                         initial={{ opacity: 1 }}
