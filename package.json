@@ -1,8 +1,8 @@
 {
-  "homepage": "https://vveyuux.github.io/homepage/",
+  "homepage": "https://vveyuux.github.io/",
   "name": "vveyuux.github.io",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

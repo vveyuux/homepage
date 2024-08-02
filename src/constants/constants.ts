@@ -11,9 +11,9 @@ import chatbotPic from "../assets/images/chatbot-emotion.png";
 import electricBillCalculatorPic from "../assets/images/electric-bill-calculator.png";
 import { HeadRowInterface, ProjectTableBodyRowPropInterface } from "../interfaces/table.interface";
 
-export const HOMEPAGE_PATH = `/homepage`;
-export const PROJECTPAGE_PATH = `${HOMEPAGE_PATH}/project/`;
-export const RESUME_PATH = `${HOMEPAGE_PATH}/resume.pdf`;
+export const HOMEPAGE_PATH = `/`;
+export const PROJECTPAGE_PATH = `/project`;
+export const RESUME_PATH = `/resume.pdf`;
 
 export const fullname = "Veerayuth Bussararungsee";
 export const position = "A Recent Software Engineering Graduate";
