@@ -11,6 +11,8 @@ const Preloader: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const loaded = useSelector((state: RootState) => state.preLoader.loaded);
     const dispatch: AppDispatch = useDispatch();
 
+    const theme = useSelector((state: RootState) => state.theme.theme);
+
     useEffect(() => {
         if (progress < 100) {
             const interval = setInterval(() => {
@@ -30,11 +32,17 @@ const Preloader: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         }
     }, [loaded]);
 
+    useEffect(() => {
+        document.body.classList.remove('light', 'dark');
+        document.body.classList.add(theme);
+        localStorage.setItem('theme', theme);
+      }, [theme]);
+
     return (
         <AnimatePresence mode="wait">
             {!loaded && (
                 <motion.div
-                    className="flex items-center justify-center flex-col min-h-screen"
+                    className="flex items-center justify-center flex-col min-h-screen bg-background dark:bg-backgroundDark"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -43,7 +51,7 @@ const Preloader: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                     <img className="rounded-full h-20 w-20 " src={coffeeGif} alt="coffee-loading" />
                     <div className="w-64 bg-gray-200 rounded-lg">
                         <motion.div
-                            className="bg-primary h-2 rounded-lg"
+                            className="bg-primary dark:bg-primaryDark h-2 rounded-lg"
                             initial={{ width: 0 }}
                             animate={{ width: `${progress}%` }}
                             transition={{ duration: 0.5 }}

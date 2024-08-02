@@ -1,15 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {
-    toggle: false,
+      theme: typeof window !== 'undefined' ? localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : 'light'
 };
 
 export const themeSlice = createSlice({
     name: "theme",
     initialState: initialState,
     reducers: {
-        toggleTheme: (state) => {
-            state.toggle = !state.toggle;
+        toggleTheme: (state, actions: PayloadAction<string>) => {
+            state.theme = actions.payload;
         },
     },
 });
