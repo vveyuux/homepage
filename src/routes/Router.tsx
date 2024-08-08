@@ -20,39 +20,39 @@ const PageRoutes: React.FC = () => {
     const location = useLocation();
 
     return (
-        <AnimatePresence mode="popLayout">
-            <Suspense fallback={<Loading />}>
-                <Preloader>
-                    <ThemeToggleButton />
-                    <Routes location={location} key={location.pathname}>
-                        <Route
-                            path={HOMEPAGE_PATH}
-                            element={
-                                <PageWrapper>
-                                    <HomePage />
-                                </PageWrapper>
-                            }
-                        />
-                        <Route
-                            path={PROJECTPAGE_PATH}
-                            element={
-                                <PageWrapper>
-                                    <ProjectPage />
-                                </PageWrapper>
-                            }
-                        />
-                    </Routes>
-                </Preloader>
-            </Suspense>
-        </AnimatePresence>
+        <Suspense fallback={<Loading />}>
+            <Preloader>
+                <ThemeToggleButton />
+                <Routes location={location} key={location.pathname}>
+                    <Route
+                        path={HOMEPAGE_PATH}
+                        element={
+                            <PageWrapper>
+                                <HomePage />
+                            </PageWrapper>
+                        }
+                    />
+                    <Route
+                        path={PROJECTPAGE_PATH}
+                        element={
+                            <PageWrapper>
+                                <ProjectPage />
+                            </PageWrapper>
+                        }
+                    />
+                </Routes>
+            </Preloader>
+        </Suspense>
     );
 };
 
 const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
-            {children}
-        </motion.div>
+        <AnimatePresence mode="wait">
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}>
+                {children}
+            </motion.div>
+        </AnimatePresence>
     );
 };
 

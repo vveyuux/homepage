@@ -49,7 +49,7 @@ export const experiences: ExperienceInterface[] = [
         title: "Student Internship",
         companyName: "SCB TechX",
         description:
-            "During my internship, I developed two web applications: a Clocking Web Application and an Overtime Web Application. The Clocking Web Application, helps employees easily record their work hours and allows managers to track and monitor this information. The Overtime Web Application, enables employees to request approval for overtime work, ensuring management can approve and verify these requests.",
+            "During my internship, I developed two web applications, a Clocking Web Application and an Overtime Web Application. The Clocking Web Application, helps employees easily record their work hours and allows managers to track and monitor this information. The Overtime Web Application, enables employees to request approval for overtime work, ensuring management can approve and verify these requests.",
         href: "https://scbtechx.io/th/home/",
         startDate: "Jun 2023",
         endDate: "Jan 2024",
